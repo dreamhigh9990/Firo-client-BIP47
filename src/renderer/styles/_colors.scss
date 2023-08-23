@@ -1,0 +1,111 @@
+@mixin light-theme {
+    --color-background-main: #FDFDFE;
+    --color-background-popups: #FFFFFF;
+    --color-background-containers: #FFFFFF;
+    --color-background-no-data: #FBFBFB;
+    --color-background-tag: #FBFBFB;
+    --color-background-sidebar: #F7F9FB;
+    --color-background-detail: #FAFAFB;
+
+    --color-text-primary: #3C3939;
+    --color-text-secondary: rgba(15, 14, 14, 0.6);
+    --color-text-disabled: rgba(15, 14, 14, 0.4);
+    --color-text-subtle-border: rgba(0, 0, 0, 0.1);
+    --color-text-minimal-button-background: rgba(60, 57, 57, 0.05);
+    --color-text-minimal-button-background-pressed: rgba(60, 57, 57, 0.1);
+
+    --color-primary: #9B1C2E;
+    --color-primary-background: #AB3748;
+    --color-primary-button-pressed: #8D071A;
+    --color-primary-button-disabled: rgba(155, 28, 46, 0.5);
+    --color-primary-button-hover: #EBEFF4;
+    --color-primary-button-minimal-background: rgba(155, 28, 46, 0.1);
+    --color-primary-button-subtle-background: rgba(155, 28, 46, 0.05);
+    --color-primary-contrast: #FDFDFF;
+
+    --color-secondary: #2FA299;
+    --color-secondary-button-pressed: #149389;
+    --color-secondary-button-disabled: rgba(47, 162, 153, 0.5);
+    --color-secondary-tag-background: rgba(47, 162, 153, 0.1);
+    --color-secondary-button-minimal-background: rgba(47, 162, 153, 0.05);
+    --color-secondary-contrast: #FDFDFF;
+
+    --color-tertiary: #A22F72;
+    --color-tertiary-disabled: rgba(162, 47, 114, 0.5);
+    --color-tertiary-tag-background: rgba(162, 47, 114, 0.1);
+    --color-tertiary-button-minimal-background: rgba(162, 47, 114, 0.05);
+
+    --color-status-success: #5EA77B;
+    --color-status-error: #EC505D;
+    --color-status-error-contrast: white;
+
+    --color-warning-background: #9B1C2E;
+    --color-warning-text: #FDFDFF;
+
+    --color-popup-outside: rgba(0, 0, 0, 0.6);
+}
+
+@mixin dark-theme {
+    --color-background-main: #1C1C1C;
+    --color-background-popups: #404040;
+    --color-background-containers: #404040;
+    --color-background-no-data: #404040;
+    --color-background-tag: #404040;
+    --color-background-sidebar: #212429;
+    --color-background-detail: #212429;
+
+    --color-text-primary: #D2D3D4;
+    --color-text-secondary: rgba(210, 211, 212, 0.6);
+    --color-text-disabled: rgba(210, 211, 212, 0.4);
+    --color-text-subtle-border: #3A3A3A;
+    --color-text-minimal-button-background: #2C2F34;
+    --color-text-minimal-button-background-pressed: rgba(60, 57, 57, 0.1);
+
+    --color-primary: #8D2932;
+    --color-primary-background: #8D071A;
+    --color-primary-button-pressed: #8D071A;
+    --color-primary-button-disabled: rgba(155, 28, 46, 0.5);
+    --color-primary-button-hover: #AB3748;
+    --color-primary-button-minimal-background: rgba(155, 28, 46, 0.1);
+    --color-primary-button-subtle-background: rgba(155, 28, 46, 0.05);
+    --color-primary-contrast: #D2D3D4;
+
+    --color-secondary: #2FA299;
+    --color-secondary-button-pressed: #149389;
+    --color-secondary-button-disabled: rgba(47, 162, 153, 0.5);
+    --color-secondary-tag-background: rgba(47, 162, 153, 0.1);
+    --color-secondary-button-minimal-background: #3A6A67;
+    --color-secondary-contrast: #FDFDFF;
+
+    --color-tertiary: #A22F72;
+    --color-tertiary-disabled: rgba(162, 47, 114, 0.5);
+    --color-tertiary-tag-background: rgba(162, 47, 114, 0.1);
+    --color-tertiary-button-minimal-background: rgba(162, 47, 114, 0.05);
+
+    --color-status-success: #5EA77B;
+    --color-status-error: #EC505D;
+    --color-status-error-contrast: white;
+
+    --color-warning-background: #9B1C2E;
+    --color-warning-text: #FDFDFF;
+
+    --color-popup-outside: rgba(0, 0, 0, 0.6);
+}
+
+:root {
+    @include light-theme;
+}
+
+#app.light-color-theme {
+    @include light-theme;
+}
+
+#app.dark-color-theme {
+    @include dark-theme;
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        @include dark-theme;
+    }
+}

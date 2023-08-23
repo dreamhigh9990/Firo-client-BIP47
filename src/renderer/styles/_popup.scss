@@ -1,0 +1,17 @@
+@mixin popup {
+    .title {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .content {
+        margin: var(--padding-base);
+    }
+
+    .buttons {
+        width: 500px !important;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

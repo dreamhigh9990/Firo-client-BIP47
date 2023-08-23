@@ -1,0 +1,54 @@
+button.solid-button, button.small-solid-button {
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    &:disabled {
+        cursor: default;
+    }
+
+    &.recommended {
+        color: var(--color-secondary-contrast);
+        background-color: var(--color-secondary);
+
+        &:active {
+            background-color: var(--color-secondary-button-pressed);
+        }
+
+        &:disabled {
+            background-color: var(--color-secondary-button-disabled);
+        }
+    }
+
+    &.unrecommended {
+        color: var(--color-text-primary);
+        background-color: var(--color-text-minimal-button-background);
+
+        &:active {
+            background-color: var(--color-text-minimal-button-background-pressed);
+        }
+
+        &:disabled {
+            color: var(--color-text-disabled);
+        }
+    }
+}
+
+button.solid-button {
+    min-width: 145px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+button.small-solid-button {
+    min-width: 80px;
+    height: 17px;
+    border-radius: 14px;
+}
+
+.two-button-holder {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}

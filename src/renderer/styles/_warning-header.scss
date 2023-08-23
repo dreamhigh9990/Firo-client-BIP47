@@ -1,0 +1,11 @@
+.warning-header {
+    user-select: none;
+    height: 100%;
+    background: var(--color-warning-background);
+    color: var(--color-warning-text);
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

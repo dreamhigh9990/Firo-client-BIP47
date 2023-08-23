@@ -1,0 +1,35 @@
+@mixin mnemonic {
+    display: grid;
+    user-select: text;
+    grid-template-columns: 1fr 1fr 1fr max-content;
+
+    .mnemonic-word {
+        -webkit-appearance: none;
+        border: none;
+        padding: 0 !important;
+        font: {
+            family: sans-serif;
+            weight: bold;
+        }
+
+        display: inline-flex;
+        outline: none;
+        font-weight: bold;
+
+        background-color: inherit;
+
+        &.hidden {
+            width: 80px;
+
+            border-bottom: {
+                style: dashed;
+                color: var(--color-text-primary);
+                width: 1px;
+            }
+
+            &.unverified {
+                color: var(--color-status-error);
+            }
+        }
+    }
+}

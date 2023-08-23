@@ -1,0 +1,30 @@
+.passphrase-input {
+    input[type="password"] {
+        display: block;
+        margin: auto;
+        width: 400px;
+        height: 40px;
+
+        padding: 10px;
+
+        color: inherit;
+        background-color: inherit;
+
+        outline: none;
+        border: {
+            color: var(--color-text-subtle-border);
+            radius: 6px;
+            style: solid;
+            width: 3px;
+        }
+    }
+
+    .error {
+        text-align: center;
+        font-weight: bold;
+        margin: {
+            top: var(--padding-base);
+            bottom: var(--padding-base);
+        }
+    }
+}
